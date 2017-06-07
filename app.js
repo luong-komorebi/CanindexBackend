@@ -21,7 +21,7 @@ var storage = multer.diskStorage({
 })
 
 app.post('/', multer({ storage: storage }).single('upload'), (req, res) => {
-  console.log("Request RECEIVED!!!!!")
+  console.log("==== Request RECEIVED!!!!!")
   console.log(req.file)
   console.log(req.body)
   let detectResult = detect.detectImg(filename, res)
